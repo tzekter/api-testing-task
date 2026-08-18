@@ -54,7 +54,7 @@ describe('Restful-Booker API Tests',()=>{
     })
 
     //Get created booking by id
-    test('Should get booking by ID', async()=>{
+    it('Should get booking by ID', async()=>{
         expect(bookingId).toBeDefined();
 
         const response = await fetch(`${url}/booking/${bookingId}`,{
@@ -70,7 +70,7 @@ describe('Restful-Booker API Tests',()=>{
     });
 
     //Update booking
-    test('Should update existing booking', async()=>{
+    it('Should update existing booking', async()=>{
         const updateData = {
             ...newBookingData,
             totalprice: 2500,
@@ -94,7 +94,7 @@ describe('Restful-Booker API Tests',()=>{
     });
 
     //Remove booking
-    test('Should delete booking', async()=>{
+    it('Should delete booking', async()=>{
         const response = await fetch(`${url}/booking/${bookingId}`,{
             method: 'DELETE',
             headers: {'Cookie': `token=${token}`}
