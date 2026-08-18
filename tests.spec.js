@@ -19,7 +19,7 @@ describe('Restful-Booker API Tests',()=>{
         additionalneeds: 'Breakfast'
     }
 
-    //Create token
+    //Create a token
     test('Should create auth token successfully ', async()=>{
         const response = await fetch(`${url}/auth`,{
             method: 'POST',
@@ -35,7 +35,7 @@ describe('Restful-Booker API Tests',()=>{
         token = body.token;
     })
 
-    //Create Booking
+    //Create a Booking
     it('Should create a new booking', async()=>{
         const response = await fetch(`${url}/booking`,{
             method: 'POST',
